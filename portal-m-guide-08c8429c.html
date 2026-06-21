@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>开云 · 一种安静的路径</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            background-color: #f9f6f0;
+            color: #2c2b2a;
+            line-height: 1.75;
+            font-size: 1.05rem;
+            padding: 2.4rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .page {
+            max-width: 780px;
+            margin: 0 auto;
+            background: rgba(255, 251, 245, 0.85);
+            padding: 2.8rem 2.4rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), 0 0 0 1px rgba(200, 180, 155, 0.15);
+            backdrop-filter: blur(2px);
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 0.8rem;
+                font-size: 1rem;
+            }
+            .page {
+                padding: 2rem 1.2rem;
+                border-radius: 18px;
+            }
+        }
+
+        .hero-line {
+            font-size: 1.8rem;
+            letter-spacing: 0.02em;
+            color: #3e3934;
+            border-left: 4px solid #b8a28c;
+            padding-left: 1.1rem;
+            margin-bottom: 1.8rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .hero-line small {
+            display: block;
+            font-size: 1rem;
+            color: #7f7368;
+            font-weight: 300;
+            margin-top: 0.25rem;
+            letter-spacing: 0.04em;
+        }
+
+        .intro-text {
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        .intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pull-quote {
+            background: #f0ebe3;
+            border-left: 6px solid #cbb7a5;
+            padding: 1rem 1.6rem;
+            margin: 1.8rem 0 2rem 0;
+            font-style: normal;
+            color: #4b443d;
+            border-radius: 0 12px 12px 0;
+            font-size: 1rem;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .pull-quote p {
+            margin: 0;
+        }
+
+        .feature-list {
+            margin: 2rem 0 1.6rem 0;
+        }
+
+        .feature-list h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #4f463e;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px dashed #d8cfc3;
+            padding-bottom: 0.4rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item .marker {
+            flex-shrink: 0;
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.5rem;
+            background: #b8a28c;
+            border-radius: 50%;
+            margin-top: 0.7rem;
+        }
+
+        .feature-item .desc {
+            flex: 1;
+        }
+
+        .feature-item .desc strong {
+            font-weight: 600;
+            color: #3e3630;
+        }
+
+        .link-sentence {
+            background: #f5efe7;
+            padding: 1.2rem 1.6rem;
+            border-radius: 30px 12px 12px 30px;
+            margin: 2rem 0 1rem 0;
+            border-left: 4px solid #b0977f;
+            font-size: 1.02rem;
+        }
+
+        .link-sentence a {
+            color: #6f523b;
+            text-decoration: none;
+            border-bottom: 1px solid #cbb7a5;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 500;
+        }
+
+        .link-sentence a:hover {
+            border-bottom-color: #7f5f46;
+            color: #4f3a2b;
+        }
+
+        .closing-note {
+            margin-top: 2.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e3dad0;
+            font-size: 0.95rem;
+            color: #6a6057;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .closing-note span {
+            opacity: 0.7;
+        }
+
+        .faq-mini {
+            margin-top: 2rem;
+            background: #f3ede5;
+            border-radius: 16px;
+            padding: 1.4rem 1.6rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4a4038;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.01em;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-mini details:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini summary {
+            cursor: pointer;
+            font-weight: 450;
+            color: #4d423b;
+            padding: 0.3rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-mini summary::before {
+            content: "▸";
+            color: #b0977f;
+            display: inline-block;
+            width: 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .faq-mini details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-mini .answer {
+            padding-left: 1.2rem;
+            color: #595049;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e1d7cb;
+            margin: 1.6rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero-line">
+        打开一个网站之前<br>
+        <small>你其实只想知道：它是做什么的，值不值得停留。</small>
+    </div>
+
+    <div class="intro-text">
+        <p>从第一眼开始，界面就应当给出答案。没有隐喻，没有冗长的引导——简短的描述，克制的语气，让访问者自己判断是否感兴趣。这正是 <strong>开云</strong> 所遵循的原则：不制造噪音，不堆砌承诺，只呈现一个清晰可感的入口。</p>
+        <p>有人说，技术平台的首页往往像一份包装精美的说明书。但在这里，我们更希望它像一张便条——写着最关键的信息，余下的交由你决定。</p>
+    </div>
+
+    <div class="pull-quote">
+        <p>“识别用途的时间，不应该超过读完三行字。” — 这是界面设计里一条朴素但有效的标准。</p>
+    </div>
+
+    <div class="feature-list">
+        <h2>方便快速识别的几个特征</h2>
+        <div class="feature-item">
+            <span class="marker"></span>
+            <div class="desc"><strong>结构优先</strong> —— 栏目与导航按使用场景组织，不堆砌无关入口。你打开时，第一眼看到的即是核心功能。</div>
+        </div>
+        <div class="feature-item">
+            <span class="marker"></span>
+            <div class="desc"><strong>文字即路径</strong> —— 没有大段宣传文案，每段描述都指向一个具体作用。读文本，等于预览网站用途。</div>
+        </div>
+        <div class="feature-item">
+            <span class="marker"></span>
+            <div class="desc"><strong>温和的视觉节奏</strong> —— 米白底色、宽松间距、文章式的排版，信息密度被有意放低，让浏览成为一件不费力的事。</div>
+        </div>
+    </div>
+
+    <div class="link-sentence">
+        如果你想亲自确认这种风格，不妨直接前往 <a href="https://portal-m-kai-yun.com">开云</a>，花两分钟看看它的页面布局与信息层次。
+    </div>
+
+    <div class="faq-mini">
+        <h3>常见疑问 · 简短摘要</h3>
+        <details>
+            <summary>这是一个人网站还是服务平台？</summary>
+            <div class="answer">它更偏向一个提供特定功能的入口页面，承载了明确的操作路径与信息结构。你可以根据页面内容自行判断它是否符合你的需求。</div>
+        </details>
+        <details>
+            <summary>页面看起来很简单，会不会内容很少？</summary>
+            <div class="answer">简单不等于单薄。这里的“简单”指的是信息组织方式清晰，没有冗余装饰。实际功能与信息深度都保留在页面内部，等待你逐步探索。</div>
+        </details>
+        <details>
+            <summary>为什么强调“识别用途”这件事？</summary>
+            <div class="answer">因为一个网站的价值，在于访问者能否在三秒内理解它能帮自己做什么。开云的页面设计正是围绕这个目标——减少猜测，增加确定性。</div>
+        </details>
+    </div>
+
+    <hr>
+
+    <div class="closing-note">
+        <span>叙述角落 · 2025</span>
+        <span>阅读愉快，无需匆忙</span>
+    </div>
+</div>
+</body>
+</html>
