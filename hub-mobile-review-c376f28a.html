@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 移动端游戏聚合平台</title>
+  <style>
+    /* reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f6f8fa;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1e1e2a;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.4rem 1.6rem 3.2rem;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 2.6rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #12131a;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: #4a4b5a;
+      max-width: 600px;
+    }
+
+    /* section common */
+    section {
+      margin-bottom: 2.8rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 530;
+      color: #1f202f;
+      border-left: 4px solid #6c7a89;
+      padding-left: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 510;
+      color: #2d2e3f;
+      margin-bottom: 0.25rem;
+    }
+    p, li {
+      font-size: 0.96rem;
+      color: #383947;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      padding: 0.45rem 0 0.45rem 1.6rem;
+      position: relative;
+      border-bottom: 1px solid #e9ebef;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+    li::before {
+      content: "⚬";
+      position: absolute;
+      left: 0.2rem;
+      color: #7c8a9c;
+      font-weight: 300;
+    }
+
+    /* card for tips / quote */
+    .card-soft {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 1px 4px rgba(0,0,0,0.03);
+      border: 1px solid #eef0f3;
+    }
+
+    .faq-item {
+      margin-bottom: 1.1rem;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      color: #1e1f2e;
+      margin-bottom: 0.2rem;
+    }
+    .faq-item p {
+      margin-left: 0.2rem;
+    }
+
+    /* inline link */
+    a {
+      color: #26547c;
+      text-decoration: none;
+      border-bottom: 1px solid #cbd5e0;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #0f2c44;
+      border-bottom-color: #0f2c44;
+    }
+
+    /* subtle hr */
+    hr {
+      border: none;
+      border-top: 1px solid #dee2e8;
+      margin: 2.2rem 0 1.8rem;
+    }
+
+    /* responsive */
+    @media (max-width: 520px) {
+      .page {
+        padding: 1.8rem 1.2rem 2.6rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .card-soft {
+        padding: 1.1rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+      <h1>爱游戏 · 移动端游戏聚合</h1>
+      <p>把零散的手机游戏体验，装进一个简洁的集合里。不浮夸，不打扰，只做靠谱的聚合与指引。</p>
+    </div>
+
+    <!-- 摘要 -->
+    <section>
+      <h2>它是什么</h2>
+      <p>
+        <a href="https://hub-mobile-igame.com">爱游戏</a> 是一个面向手机用户的游戏资源聚合站点，主要收录各类移动端游戏的简介、风格归类以及下载引导。站内内容以整理和索引为主，不涉及游戏文件分发，也不提供任何破解或违规资源。你可以把它理解成一个安静的游戏目录——想找某类游戏时，来这里翻翻看，也许会有收获。
+      </p>
+    </section>
+
+    <!-- 亮点 (特点卡片式) -->
+    <section>
+      <h2>几个值得留意的地方</h2>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div class="card-soft">
+          <h3>分类干净，检索直接</h3>
+          <p>游戏按类型、风格和热度做了简单分组，没有冗余的推荐算法，也没有弹窗干扰。你可以在分类下快速扫一眼，找到感兴趣的内容。</p>
+        </div>
+        <div class="card-soft">
+          <h3>保持更新，但不过度</h3>
+          <p>站点会定期补充新的游戏信息，同时清理失效或过时的条目。更新节奏稳定，不制造信息焦虑，也不堆积无用列表。</p>
+        </div>
+        <div class="card-soft">
+          <h3>适合轻度到中度玩家</h3>
+          <p>如果你只是想在通勤路上、午休间隙找一款能玩下去的手游，爱游戏整理的列表通常比应用商店的推荐更合口味——因为这里的筛选标准更接近真实玩家。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用建议 / 场景 -->
+    <section>
+      <h2>什么时候可以打开它</h2>
+      <ul>
+        <li>刚通关一款游戏，暂时没想好接下来玩什么 —— 去分类里逛逛，很多冷门但优质的作品藏在角落里。</li>
+        <li>想找某类特定风格的游戏（比如像素风、叙事解谜、轻竞技），但不想被应用商店的大数据推荐绑架。</li>
+        <li>换手机或重置系统后，需要重新下载一批游戏，爱游戏的整理列表可以作为参考清单。</li>
+        <li>单纯想看看最近手机游戏圈里有什么值得关注的新名字，不求全面，但求靠谱。</li>
+      </ul>
+    </section>
+
+    <!-- 可信但克制的说明 -->
+    <section>
+      <h2>关于访问与使用</h2>
+      <div class="card-soft" style="background: #fafcff;">
+        <p style="margin-bottom: 0.6rem;">
+          <strong style="font-weight: 500;">爱游戏</strong> 本身不提供游戏安装包，也不直接跳转第三方下载站。每个游戏条目会附上官方页面或开发者指定的下载渠道，你需要自己判断是否要安装。站点不会收集你的个人信息，也没有广告联盟追踪脚本——这是一份相对安静的浏览体验。
+        </p>
+        <p style="margin-top: 0.6rem;">
+          如果你遇到某个游戏的链接失效或信息过时，可以通过页面底部的方式反馈。维护者会定期处理，但不保证即时修正。抱着“一个不断完善的索引”的心态来使用，会比较轻松。
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ 摘要 (简洁版) -->
+    <section>
+      <h2>常见想法 · 简短回应</h2>
+      <div class="faq-item">
+        <strong>这里收录的游戏多吗？</strong>
+        <p>数量不算海量，但每个分类下都保留了经过筛选的条目。比起多，更注重“值得放进列表”。</p>
+      </div>
+      <div class="faq-item">
+        <strong>会不会有内购陷阱或恶意软件？</strong>
+        <p>站点只收录正规渠道的游戏，不收录破解版、修改版或来源不明的安装包。但最终判断权在你手里：下载前留意开发者信息与应用权限。</p>
+      </div>
+      <div class="faq-item">
+        <strong>我可以推荐游戏加入列表吗？</strong>
+        <p>页面目前没有公开提交入口，但你可以通过其他渠道联系维护者，合理的推荐会被考虑收录。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 结尾 / 重申链接 -->
+    <div style="text-align: left; font-size: 0.92rem; color: #5d6070;">
+      <p>如果你对移动端游戏的选择感到迷茫，不妨从 <a href="https://hub-mobile-igame.com">爱游戏</a> 的分类列表开始浏览。保持简单，保持自主。</p>
+      <p style="margin-top: 0.6rem; color: #7f8295;">—— 不承诺最好，但承诺真实。</p>
+    </div>
+
+  </div>
+</body>
+</html>
